@@ -5,6 +5,8 @@ import javax.swing.tree.TreePath;
 
 
 import java.awt.*;
+import java.io.*;
+import java.util.Properties;
 /**
  * classe regroupant des méthodes annexes.
  */
@@ -19,10 +21,23 @@ public static   Connection con;
  */
     public static void open_connection(){
 
+        Properties config = new Properties();
+        try (InputStream input = Utils.class.getClassLoader().getResourceAsStream("config.properties")) {
+            config.load(input);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }    
+        
+        String username = config.getProperty("db.username");
+        String password = config.getProperty("db.password");
+        String url = config.getProperty("db.url");
+
+
+
             try{
                 Class.forName("org.mariadb.jdbc.Driver"); 
                 try{
-                    con = DriverManager.getConnection("jdbc:mariadb://dwarves.iut-fbleau.fr/amoussa","amoussa", "badbodhurul");          
+                    con = DriverManager.getConnection(url,username, password);          
                 } catch (Exception se) {
                     System.err.println("errreur Sql"+se);            
                 }            
