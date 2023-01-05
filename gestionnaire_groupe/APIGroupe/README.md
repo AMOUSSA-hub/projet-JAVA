@@ -4,7 +4,7 @@ javadoc: https://dwarves.iut-fbleau.fr/~amoussa/javadoc_projetIHM2022/doc/index.
 
 pour lancer le programme placez vous dans le répertoire APIGroupe puis:  
 
-pour le lancer : _make run_ (sur Linux)  
-                _make run_W_ (sur windows)
+pour lancer : *make run* (sur Linux)  
+                 *make run_W* (sur windows)
 
 pour générer une archive : _make jar_
