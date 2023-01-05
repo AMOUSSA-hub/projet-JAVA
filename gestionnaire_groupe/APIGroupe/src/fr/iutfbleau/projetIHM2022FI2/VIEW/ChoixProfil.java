@@ -38,6 +38,8 @@ public class ChoixProfil extends JFrame {
 		JButton retour_etudiant = new JButton("retour");
 
 		
+
+		
 		mdp.setPreferredSize(new Dimension(100,25));
 		setLocation(650,350);
         setSize(new Dimension(300,100));
@@ -78,6 +80,7 @@ public class ChoixProfil extends JFrame {
 		pan_log_admin.add(mdp);
 		pan_log_admin.add(valider_admin);
 		pan_log_admin.add(retour_admin);
+		pan_log_admin.add(new JLabel("mdp : \"root\""));
 
 		main_pan.add(pan_log_admin,"admin");
 
