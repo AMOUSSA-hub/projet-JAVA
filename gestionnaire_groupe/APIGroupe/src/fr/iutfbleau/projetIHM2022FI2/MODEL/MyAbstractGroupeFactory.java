@@ -220,7 +220,25 @@ public class MyAbstractGroupeFactory implements AbstractGroupeFactory {
     
 
         return groupe_of_student;
-    };
+    }
+
+    public void editNameGroupe( Groupe g, String new_name ){
+
+        for(Groupe freres : g.getPointPoint().getSousGroupes()){
+
+            if(freres.getName().replaceAll("\\s", "").equals(new_name.replaceAll("\\s", "")) ){
+                JOptionPane.showMessageDialog(new JDialog(), "impossible de mettre ce nom: groupe du même nom déjà existant");
+                throw new IllegalStateException("erreur groupe du même nom");  
+            }
+        }
+
+
+
+        g.editName(new_name);
+
+    } 
+
+
 
     
     

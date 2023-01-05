@@ -93,6 +93,12 @@ public interface Groupe extends MonPrint {
      */
     public Set<Etudiant> getEtudiants();
 
+    /**
+     * Permet de changer le nom d'un groupe
+     * @param new_name le noveau nom
+     * @return true si le changement est valide sinon false.
+     */
+    public boolean editName(String new_name);
      /**
     * vérife si l'étudiant fait parti du groupe.
     * @param e etudiant que l'on veut tester

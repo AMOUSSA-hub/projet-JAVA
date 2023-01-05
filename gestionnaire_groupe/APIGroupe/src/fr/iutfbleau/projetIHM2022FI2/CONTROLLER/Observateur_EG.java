@@ -45,18 +45,11 @@ public class Observateur_EG implements ActionListener {
 
             
                     if (new_name.replaceAll("\\s", "").length() != 0 && new_name.equals("nouveau nom") == false && !new_name.equals(group_selected.getName())){
-                        this.fen_edit.dispose();   
-                        boolean result = this.group_selected.editName(new_name);
-
-                        if(result == true){
+                          
+                        DashboardGroupe.bd.editNameGroupe(group_selected, new_name);
+                        this.fen_edit.dispose(); 
                         DashboardGroupe.refresh_pan_group();
-                        }
-                        else{
-                            
-                            JOptionPane.showMessageDialog(new JDialog(), "impossible de mettre ce nom: groupe du même nom déjà existant");
-                            throw new IllegalStateException("erreur groupe du même nom");
-                        }
-
+                       
                     }
                 
         }
