@@ -43,7 +43,7 @@ clean_jar_W:
 
 #POUR LINUX 
 clean : 
-	rm -r build/*
+	rm -r build/fr/iutfbleau/projetIHM2022FI2/*
 
 clean_jar:
 	rm gestionnaire_groupe.jar
