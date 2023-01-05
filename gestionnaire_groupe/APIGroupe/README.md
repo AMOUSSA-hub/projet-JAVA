@@ -7,4 +7,4 @@ pour lancer le programme placez vous dans le répertoire APIGroupe puis:
 pour lancer : **make run** (sur Linux)  
                  **make run_W** (sur Windows)
 
-pour générer une archive : _make jar_
+pour générer une archive : **make jar**
